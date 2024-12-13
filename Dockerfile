@@ -1,9 +1,9 @@
-# Use the official MariaDB-Image from Docker Hub
+# Verwende das offizielle MariaDB-Image von Docker Hub
 FROM mariadb:latest
 
-# Set environment variables for the standard configuration
+# Umgebungsvariablen für die Standardkonfiguration setzen
 ENV MARIADB_ROOT_PASSWORD=admin
 ENV MARIADB_DATABASE=mariaDB
 
-# Copy the initialization SQL-Scripts to the MariaDB directory used for initial setup
+# Kopiere die Initialisierungs-SQL-Skripte in das MariaDB-Verzeichnis für die Erstkonfiguration
 COPY source /docker-entrypoint-initdb.d
