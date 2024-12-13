@@ -5,5 +5,5 @@ FROM mariadb:latest
 ENV MARIADB_ROOT_PASSWORD=admin
 ENV MARIADB_DATABASE=mariaDB
 
-# Kopiere die Initialisierungs-SQL-Skripte in das MariaDB-Verzeichnis für die Erstkonfiguration
+# Kopiere die Initialisierungs-SQL-Skripte für die Erstkonfiguration
 COPY source /docker-entrypoint-initdb.d
